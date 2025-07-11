@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 📆 Task Calendar Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based task management dashboard that lets users add, view, and categorize tasks on a calendar interface. The project includes chart visualizations for task insights and uses modern libraries like Ant Design, Redux Toolkit, and Formik.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔗 Live Demo
 
-### `npm start`
+👉 **Deployed on Netlify:**  
+[https://task-calendar-dashboard.netlify.app/](https://task-calendar-dashboard.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Features
 
-### `npm test`
+### ✅ 1. Calendar View
+- Integrated using Ant Design’s `<Calendar />` component.
+- Click on a date to add/view tasks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ✅ 2. Add/Edit Task (Formik + Yup)
+- Modal form opens on date selection.
+- Fields:
+  - **Title** (required)
+  - **Description** (optional)
+  - **Date** (auto-filled)
+  - **Category** (Dropdown: `success`, `warning`, `issue`, `info`)
+- Form validated with **Yup**.
 
-### `npm run build`
+### ✅ 3. Task Listing
+- Shows tasks for the selected date.
+- Each task displays:
+  - Title, Description, Date, and Category
+  - Edit and Delete options
+- Categories are shown using **Ant Design Tags** (color-coded).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ✅ 4. Chart Visualization
+- **Pie chart** displays the number of tasks per category.
+- Dropdown filter with **Apply** and **Reset** buttons.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ✅ 5. State Management
+- All task data is stored in the **Redux Toolkit store**.
+- No backend – data lives only during the session.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **ReactJS**
+- **Ant Design** (UI library)
+- **Redux Toolkit** (State management)
+- **Formik + Yup** (Form and validation)
+- **Recharts** (Chart visualization)
+- **Day.js** (Date formatting)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Clone the repo
+git clone https://github.com/hasaniisaher21/task-calendar-dashboard.git
+cd task-calendar-dashboard
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run development server
+npm start
